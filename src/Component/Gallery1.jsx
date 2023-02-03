@@ -1,6 +1,7 @@
 import { Component } from "react";
-import { Alert, Card, Col, Row, Spinner } from "react-bootstrap";
+import { Alert, Carousel, Col, Row, Spinner } from "react-bootstrap";
 // import { BsChatSquareText, BsPlayCircle, BsPlus } from "react-icons/bs";
+import "../Component/componentStyles.css";
 
 class Gallery1 extends Component {
   state = {
@@ -37,23 +38,32 @@ class Gallery1 extends Component {
   render() {
     return (
       <div>
-        <h3 className="heading">{this.props.title} Gallery</h3>
+        <h5 className="text-left">{this.props.title}</h5>
 
-        <Row>
-          {this.state.errMessage && (
-            <Alert variant="danger">{this.state.errMessage}</Alert>
-          )}
+        {this.state.errMessage && (
+          <Alert variant="danger">{this.state.errMessage}</Alert>
+        )}
 
-          {this.state.isLoading && <Spinner animation="grow" />}
-
-          {this.state.movies.slice(0, 4).map((movie) => (
-            <Col sm={6} md={3} key={movie.imdbID}>
-              <Card className="Cards">
-                <Card.Img variant="top" src={movie.Poster} />
-              </Card>
-            </Col>
+        {this.state.isLoading && <Spinner animation="grow" />}
+        <Carousel className="mb-5">
+          {this.state.movies.slice(0, 3).map((movie) => (
+            <Carousel.Item key={movie.imdbID}>
+              <Row className="mx-0">
+                {this.state.movies.slice(0, 6).map((movie) => (
+                  <Col xs={12} sm={6} md={3} lg={2} className="px-1">
+                    <img
+                      className="d-block w-100"
+                      src={movie.Poster}
+                      alt="Second slide"
+                      width="300px"
+                      height="310px"
+                    />
+                  </Col>
+                ))}
+              </Row>
+            </Carousel.Item>
           ))}
-        </Row>
+        </Carousel>
       </div>
       //   <div id="movie-row" class="row">
 

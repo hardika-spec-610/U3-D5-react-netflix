@@ -162,3 +162,6 @@ a:hover {
   background-color: var(--text-color);
   border-color: var(--text-color);
 }
+.carousel-indicators {
+  display: none;
+}
