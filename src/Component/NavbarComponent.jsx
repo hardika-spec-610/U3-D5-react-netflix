@@ -57,9 +57,7 @@ class NavbarComponent extends Component {
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu className="dropdown-menu dropdown-menu-right">
-                    <Dropdown.Item href="#/action-1">
-                      Edit Profile
-                    </Dropdown.Item>
+                    <Dropdown.Item href="#">Edit Profile</Dropdown.Item>
                     <Dropdown.Item href="#/action-2">
                       Another action
                     </Dropdown.Item>

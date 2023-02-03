@@ -40,7 +40,6 @@
   --bg-color: #181818;
 }
 .App {
-  text-align: center;
   font-family: var(--font-netflixSans-regular);
   margin: 0;
   background-color: var(--bg-color);

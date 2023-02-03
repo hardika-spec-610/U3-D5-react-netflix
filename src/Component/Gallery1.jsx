@@ -27,11 +27,11 @@ class Gallery1 extends Component {
         console.log("data", movieData);
         this.setState({ movies: movieData.Search, isLoading: false });
       } else {
-        this.setState({ ...this.state, isLoading: false, isError: true });
+        this.setState({ isLoading: false, isError: true });
       }
     } catch (e) {
       console.error(e);
-      this.setState({ ...this.state, isLoading: false, isError: true });
+      this.setState({ isLoading: false, isError: true });
     }
   };
 

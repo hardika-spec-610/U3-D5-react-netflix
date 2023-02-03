@@ -16,7 +16,7 @@ class CarouselItem extends Component {
         <img
           className="d-block w-100"
           src={this.props.poster}
-          alt="Second slide"
+          alt="Movie Poster"
           width="300px"
           height="310px"
         />

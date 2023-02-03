@@ -162,6 +162,12 @@ a:hover {
   background-color: var(--text-color);
   border-color: var(--text-color);
 }
+.show > .btn-primary.dropdown-toggle {
+  background-color: var(--font-color);
+  background-color: #343a40;
+  border-color: #343a40;
+  color: var(--font-color);
+}
 .carousel-indicators {
   display: none;
 }
