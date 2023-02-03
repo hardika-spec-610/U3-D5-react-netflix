@@ -12,7 +12,7 @@ function App() {
       <header>
         <NavbarComponent logo={netflixLogo} accountLogo={accountLogo} />
       </header>
-      <Container fluid className="px-5 pb-2">
+      <Container fluid className="px-5 pb-5">
         <Gallery1 name="harry potter" title="Harry Potter" />
         <Gallery1 name="Lord of the Rings" title="Lord of the Rings" />
       </Container>
