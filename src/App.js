@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import NavbarComponent from "./Component/NavbarComponent";
+import netflixLogo from "./assets/netflix_logo.png";
+import accountLogo from "./assets/kids_icon.png";
+import { Container } from "react-bootstrap";
+import Gallery1 from "./Component/Gallery1";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <NavbarComponent logo={netflixLogo} accountLogo={accountLogo} />
       </header>
+      <Container fluid className="px-5 pb-2">
+        <h4 className="mb-0">Trending Now</h4>
+        <Gallery1 name="harry potter" title="Harry Potter" />
+        <Gallery1 name="Lord of the Rings" title="Lord of the Rings" />
+      </Container>
     </div>
   );
 }
