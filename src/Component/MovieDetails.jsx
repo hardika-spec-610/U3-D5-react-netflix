@@ -1,18 +1,9 @@
 import { useEffect, useState } from "react";
-import {
-  Alert,
-  Badge,
-  Button,
-  Card,
-  Col,
-  ListGroup,
-  ListGroupItem,
-  Row,
-  Spinner,
-} from "react-bootstrap";
+import { Alert, Badge, Button, Card, Col, Row, Spinner } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import "../Component/componentStyles.css";
 import CommentsList from "./CommentsList";
+import MovieDetailsListGroup from "./MovieDetailsListGroup";
 
 const MovieDetails = ({ movieId }) => {
   const [selectedMovie, setSelectedMovie] = useState([]);
@@ -109,54 +100,7 @@ const MovieDetails = ({ movieId }) => {
               </Badge>
               <Card.Text></Card.Text>
             </Card.Body>
-            <ListGroup>
-              <ListGroupItem className="list-bg">
-                Year:
-                <span className="detail-text2 ml-2"> {selectedMovie.Year}</span>
-              </ListGroupItem>
-              <ListGroupItem className="list-bg">
-                Released on:
-                <span className="detail-text2 ml-2">
-                  {selectedMovie.Released}
-                </span>
-              </ListGroupItem>
-              <ListGroupItem className="list-bg">
-                Actors:
-                <span className="detail-text2 ml-2">
-                  {selectedMovie.Actors}
-                </span>
-              </ListGroupItem>
-              <ListGroupItem className="list-bg">
-                Genre:
-                <span className="detail-text2 ml-2">{selectedMovie.Genre}</span>
-              </ListGroupItem>
-              <ListGroupItem className="list-bg">
-                Country:{" "}
-                <span className="detail-text2 ml-2">
-                  {selectedMovie.Country}
-                </span>
-              </ListGroupItem>
-              <ListGroupItem className="list-bg">
-                Language:
-                <span className="detail-text2 ml-2">
-                  {selectedMovie.Language}
-                </span>
-              </ListGroupItem>
-              <ListGroupItem className="list-bg">
-                imdbVotes:{" "}
-                <span className="detail-text2 ml-2">
-                  {selectedMovie.imdbVotes}
-                </span>
-              </ListGroupItem>
-              {selectedMovie.totalSeasons && (
-                <ListGroupItem className="list-bg">
-                  Total Seasons:
-                  <span className="detail-text2 ml-2">
-                    {selectedMovie.totalSeasons}
-                  </span>
-                </ListGroupItem>
-              )}
-            </ListGroup>
+            <MovieDetailsListGroup selectedMovieDetails={selectedMovie} />
 
             <Link to="/tv-shows">
               <Button
