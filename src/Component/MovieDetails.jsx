@@ -5,7 +5,7 @@ import "../Component/componentStyles.css";
 import CommentsList from "./CommentsList";
 import MovieDetailsListGroup from "./MovieDetailsListGroup";
 
-const MovieDetails = ({ movieId }) => {
+const MovieDetails = () => {
   const [selectedMovie, setSelectedMovie] = useState([]);
   const [comment, setComment] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -65,6 +65,11 @@ const MovieDetails = ({ movieId }) => {
     movieInfoComments();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  //   useEffect(() => {
+  //     getMovieDetails();
+  //     movieInfoComments();
+  //     // eslint-disable-next-line react-hooks/exhaustive-deps
+  //   }, [movieId]);
 
   return (
     <div className="pt-5 details-card mx-auto">
