@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Alert, Row, Spinner } from "react-bootstrap";
+// import { BsChatSquareText, BsPlayCircle, BsPlus } from "react-icons/bs";
 import "../Component/componentStyles.css";
 import CarouselItem from "./CarouselItem";
 
@@ -40,8 +41,8 @@ class Gallery1 extends Component {
       <div className="mt-5">
         <h5 className="text-left">{this.props.title}</h5>
         <Row className="mb-4">
-          {this.state.errMessage && (
-            <Alert variant="danger">{this.state.errMessage}</Alert>
+          {this.state.isError && (
+            <Alert variant="danger">Aww snap, we got an error!😨</Alert>
           )}
 
           {this.state.isLoading && <Spinner animation="grow" />}
@@ -55,41 +56,46 @@ class Gallery1 extends Component {
             />
           ))}
           {/* <Carousel className="mb-5">
-          {this.state.movies.slice(0, 3).map((movie) => (
-            <Carousel.Item key={movie.imdbID}>
-              <Row className="mx-0">
-                {this.state.movies.slice(0, 6).map((movie) => (
-                  <Col xs={12} sm={6} md={3} lg={2} className="px-1 movie-card">
-                    <img
-                      className="d-block w-100"
-                      src={movie.Poster}
-                      alt="Second slide"
-                      width="300px"
-                      height="310px"
-                    />
-                    <div class="infos-container">
-                      <div class="d-flex mb-3 mt-4 align-items-center">
-                        <BsPlayCircle className="mr-2" />
+            {this.state.movies.slice(0, 3).map((movie) => (
+              <Carousel.Item key={movie.imdbID}>
+                <Row className="mx-0">
+                  {this.state.movies.slice(0, 6).map((movie) => (
+                    <Col
+                      xs={12}
+                      sm={6}
+                      md={3}
+                      lg={2}
+                      className="px-1 movie-card"
+                    >
+                      <img
+                        className="d-block w-100"
+                        src={movie.Poster}
+                        alt="Second slide"
+                        width="300px"
+                        height="310px"
+                      />
+                      <div class="infos-container">
+                        <div class="d-flex mb-3 mt-4 align-items-center">
+                          <BsPlayCircle className="mr-2" />
 
-                        <span>Play S8 E7</span>
-                        <BsPlus className="ml-auto plus-btn" />
-                      </div>
-                      <h6 class="pime-title">{this.props.src}</h6>
+                          <span>Play S8 E7</span>
+                          <BsPlus className="ml-auto plus-btn" />
+                        </div>
+                        <h6 class="pime-title">{this.props.src}</h6>
 
-                      <p>{this.props.src}</p>
-                      <div class="card-movie-footer d-flex align-items-center">
-                        <span class="mr-2">{this.props.src}</span>
-                        <span class="mr-2">2012</span>
-                        <BsChatSquareText className="mr-2" />
-                        <div>13+</div>
+                        <p>{this.props.src}</p>
+                        <div class="card-movie-footer d-flex align-items-center">
+                          <span class="mr-2">{this.props.src}</span>
+                          <span class="mr-2">2012</span>
+                          <BsChatSquareText className="mr-2" />
+                        </div>
                       </div>
-                    </div>
-                  </Col>
-                ))}
-              </Row>
-            </Carousel.Item>
-          ))}
-        </Carousel> */}
+                    </Col>
+                  ))}
+                </Row>
+              </Carousel.Item>
+            ))}
+          </Carousel> */}
         </Row>
       </div>
     );

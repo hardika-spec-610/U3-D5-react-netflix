@@ -27,35 +27,35 @@ class Footer extends Component {
             </a>
           </Col>
           <Col xs={12} sm={6} md={4} lg={3}>
-            <a href="#Link" class="ftr-link d-block py-1">
+            <a href="#Link" className="ftr-link d-block py-1">
               Audio Description
             </a>
-            <a href="#Link" class="ftr-link d-block py-1">
+            <a href="#Link" className="ftr-link d-block py-1">
               Investor Relations
             </a>
-            <a href="#Link" class="ftr-link d-block py-1">
+            <a href="#Link" className="ftr-link d-block py-1">
               Legal Notices
             </a>
           </Col>
           <Col xs={12} sm={6} md={4} lg={3}>
-            <a href="#Link" class="ftr-link d-block py-1">
+            <a href="#Link" className="ftr-link d-block py-1">
               Help Center
             </a>
-            <a href="#Link" class="ftr-link d-block py-1">
+            <a href="#Link" className="ftr-link d-block py-1">
               Jobs
             </a>
-            <a href="#Link" class="ftr-link d-block py-1">
+            <a href="#Link" className="ftr-link d-block py-1">
               Cookies Preferences
             </a>
           </Col>
           <Col xs={12} sm={6} md={4} lg={3}>
-            <a href="#Link" class="ftr-link d-block py-1">
+            <a href="#Link" className="ftr-link d-block py-1">
               Git Cards
             </a>
-            <a href="#Link" class="ftr-link d-block py-1">
+            <a href="#Link" className="ftr-link d-block py-1">
               Terms of Use
             </a>
-            <a href="#Link" class="ftr-link d-block py-1">
+            <a href="#Link" className="ftr-link d-block py-1">
               Corporate Information
             </a>
           </Col>
