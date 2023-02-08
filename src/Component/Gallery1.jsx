@@ -53,6 +53,7 @@ class Gallery1 extends Component {
               movieType={movie.Type}
               movieYear={movie.Year}
               key={movie.imdbID}
+              movieId={movie.imdbID}
             />
           ))}
           {/* <Carousel className="mb-5">

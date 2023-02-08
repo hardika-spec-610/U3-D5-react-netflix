@@ -174,3 +174,26 @@ a:hover {
 .movie-title {
   font-size: 13px;
 }
+/* __________________________________________ */
+.card-bg {
+  background-color: rgba(27, 37, 48, 0.8);
+  max-width: 1100px;
+}
+.movie-title2 {
+  font-size: 40px;
+}
+.list-bg {
+  background-color: transparent;
+}
+.detail-text2 {
+  color: var(--opacity-text);
+}
+.warning-badge {
+  background-color: #343a40;
+  color: var(--font-color);
+}
+.tv-show-btn {
+  max-width: 150px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
