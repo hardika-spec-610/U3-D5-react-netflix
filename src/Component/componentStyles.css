@@ -175,9 +175,11 @@ a:hover {
   font-size: 13px;
 }
 /* __________________________________________ */
+.details-card {
+  max-width: 1100px;
+}
 .card-bg {
   background-color: rgba(27, 37, 48, 0.8);
-  max-width: 1100px;
 }
 .movie-title2 {
   font-size: 40px;

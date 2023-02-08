@@ -5,7 +5,7 @@ const CommentsList = ({ commentArray }) => {
   return (
     <>
       {commentArray.map((singleComment) => (
-        <Card key={singleComment._id} className="card-bg">
+        <Card key={singleComment._id} className="card-bg mx-auto">
           <Card.Header>Author: {singleComment.author}</Card.Header>
           <ListGroup variant="flush">
             <ListGroup.Item className="list-bg">

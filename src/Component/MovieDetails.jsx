@@ -61,31 +61,19 @@ const MovieDetails = ({ movieId }) => {
   };
 
   useEffect(() => {
+    getMovieDetails();
     movieInfoComments();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    movieInfoComments();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [movieId]);
-
-  useEffect(
-    () => {
-      getMovieDetails();
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    []
-  );
-
   return (
-    <div className="pt-5">
+    <div className="pt-5 details-card mx-auto">
       {isLoading && ( // isLoading is true or false
         <Spinner animation="border" variant="success" />
       )}
       {isError && <Alert variant="danger">Aww snap, we got an error!😨</Alert>}
 
-      <Card className="card-bg mx-auto">
+      <Card className="card-bg ">
         <Row className="no-gutters">
           <Col className="col-md-4">
             <Card.Img src={selectedMovie.Poster} width="200px" height="100%" />
@@ -115,7 +103,6 @@ const MovieDetails = ({ movieId }) => {
           </Col>
         </Row>
       </Card>
-
       <h4 className="mt-5">Comments</h4>
       {comment.length > 0 && comment ? (
         <CommentsList commentArray={comment} />
