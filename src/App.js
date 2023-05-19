@@ -10,6 +10,7 @@ import "./Component/componentStyles.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NotFound404 from "./Component/NotFound404";
 import MovieDetails from "./Component/MovieDetails";
+import Home from "./Component/Home";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         </header>
         <Container fluid className="px-5 pb-5">
           <Routes>
+            <Route element={<Home />} path="/" />
             <Route element={<TvShows />} path="/tv-shows" />
             <Route element={<MovieDetails />} path="/details/:movieId" />
             <Route element={<NotFound404 />} path="*" />
