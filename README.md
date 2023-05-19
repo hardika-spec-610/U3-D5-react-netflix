@@ -1,8 +1,8 @@
 # Netflix app
 
-## Backend
+## API
 
-Open [https://github.com/hardika-spec-610/netflix-backend] (Backend Repository) to view it in your browser.
+Build using [https://www.omdbapi.com/] omdb API.
 
 ## Images
 
